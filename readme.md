@@ -4,16 +4,13 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/zyx-0314/">
-  <!-- TODO: If you want to add logo or banner you can add it here -->
-    <img src="./assets/img/nyebe_white.png" alt="Nyebe" width="130" height="100">
+  <a href="https://github.com/your-github-username/">
+    <img src="./Design/v1/LOGO.png" alt="Eldercareco" width="130" height="100">
   </a>
-<!-- TODO: Change Title to the name of the title of your Project -->
-  <h3 align="center">Title</h3>
+  <h3 align="center">Eldercareco</h3>
 </div>
-<!-- TODO: Make a short description -->
 <div align="center">
-  Short Description. (Optional)
+  A comprehensive platform for elder care management.
 </div>
 
 <br />
@@ -57,15 +54,17 @@
 
 ## Overview
 
-<!-- TODO: To be changed -->
-<!-- The following are just sample -->
-Description of the project in details.
+Eldercareco is a comprehensive platform designed to manage and streamline elder care services. It aims to provide a seamless experience for caregivers and family members to monitor and manage the well-being of elderly individuals.
 
-Guiding Question:
-- What is the project
-- Whats the purpose
-- What are key components
-- What technology used and how it is used
+Guiding Questions:
+- What is the project?
+  - Eldercareco is a platform for managing elder care services.
+- What's the purpose?
+  - To provide a centralized system for monitoring and managing the well-being of elderly individuals.
+- What are key components?
+  - MultiPage Website, Parallax transition, Transactional features.
+- What technology is used and how is it used?
+  - HTML, CSS, JavaScript for front-end development.
 
 ### Key Components
 <!-- TODO: List of Key Components -->
@@ -92,31 +91,54 @@ Guiding Question:
 7. File Structure to follow below.
 
 ```
-WD-ProjectName
-└─ assets
-|   └─ css
-|   |   └─ style.css
-|   └─ img
-|   |   └─ fileWith.jpeg/.jpg/.webp/.png
-|   └─ js
-|       └─ script.js
-└─ pages
-|  └─ pageName
-|     └─ assets
-|     |  └─ css
-|     |  |  └─ style.css
-|     |  └─ img
-|     |  |  └─ fileWith.jpeg/.jpg/.webp/.png
-|     |  └─ js
-|     |     └─ script.js
-|     └─ index.html
-└─ index.html
-└─ readme.md
+┣ 📂assets
+┃ ┣ 📂css
+┃ ┃ ┗ 📜style.css
+┃ ┣ 📂img
+┃ ┃ ┗ 📜nyebe_white.png
+┃ ┗ 📂js
+┃   ┗ 📜script.js
+┣ 📂Design
+┃ ┗ 📂v1
+┃   ┣ 📜About_Us.png
+┃   ┣ 📜Hero_Page.png
+┃   ┣ 📜LOGO.png
+┃   ┣ 📜Main_Page.png
+┃   ┗ 📜V1.pdf
+┣ 📂pages
+┃ ┣ 📂page1
+┃ ┃ ┣ 📂assets
+┃ ┃ ┃ ┣ 📂css
+┃ ┃ ┃ ┃ ┗ 📜style.css
+┃ ┃ ┃ ┗ 📂js
+┃ ┃ ┃   ┗ 📜scripts.js
+┃ ┃ ┗ 📜index.html
+┃ ┣ 📂page2
+┃ ┃ ┣ 📂assets
+┃ ┃ ┃ ┣ 📂css
+┃ ┃ ┃ ┃ ┗ 📜style.css
+┃ ┃ ┃ ┗ 📂js
+┃ ┃ ┃   ┗ 📜scripts.js
+┃ ┃ ┗ 📜index.html
+┃ ┗ 📂page3
+┃   ┣ 📂assets
+┃   ┃ ┣ 📂css
+┃   ┃ ┃ ┗ 📜style.css
+┃   ┃ ┗ 📂js
+┃   ┃   ┗ 📜scripts.js
+┃   ┗ 📜index.html
+┣ 📜.gitignore
+┣ 📜index.html
+┣ 📜LICENSE
+┗ 📜readme.md
 ```
 
 ## Resources
 
-<!-- TODO: Add References -->
 | Title | Purpose | Link |
 |-|-|-|
-| Sample Title | Sample purpose would be here like this and this is the example of what it is. | trykolang.com |
+| HTML Documentation | Official HTML documentation | [HTML Docs](https://developer.mozilla.org/en-US/docs/Web/HTML) |
+| CSS Documentation | Official CSS documentation | [CSS Docs](https://developer.mozilla.org/en-US/docs/Web/CSS) |
+| JavaScript Documentation | Official JavaScript documentation | [JavaScript Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript) |
+| Figma | Design and prototype tool | [Figma](https://www.figma.com/design/0mDkc8Pw1GTQ3On49MDFsy/Untitled?node-id=9-2&t=exyNne46f8J5wXS9-1) |
+| Freepik | Free images and graphics | [Freepik](https://www.freepik.com) |
