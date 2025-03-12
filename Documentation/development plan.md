@@ -1,153 +1,108 @@
-# Eldercare co. - Project Plan
+# ElderCare Co. - Project Plan
 
----
+## Table of Contents
+1. [Persona](#persona)
+2. [UX Flow](#ux-flow)
+3. [Layout and Navigation](#layout-and-navigation)
+4. [Color Scheme and Visual Style](#color-scheme-and-visual-style)
+5. [Entity Relational Database (ERD)](#entity-relational-database-erd)
+6. [Dataflow](#dataflow)
 
 ## 1. Persona
+**Name**: ElderCare Co.
 
-**Name:** Eldercare co.  
-**Background:**  
-* A caregiver or family member responsible for the well-being of elderly individuals.  
+**Background**:
+* A caregiver or family member responsible for the well-being of elderly individuals.
 * Seeks efficient ways to manage and monitor elder care services.
 
-**Key Characteristics:**  
-Compassionate and responsible  
-* Values detailed, step-by-step guides  
-* Seeks community support and reliable information  
-* Prefers user-friendly and intuitive interfaces    
-
----
+**Key Characteristics**:
+* Compassionate and responsible
+* Values detailed, step-by-step guides
+* Seeks community support and reliable information
+* Prefers user-friendly and intuitive interfaces
 
 ## 2. UX Flow
-
-
-
----
+* **Homepage**: User lands on the homepage and can see the main banner with the company tagline, contact options, and navigation links.
+* **About Us**: User navigates to the “About Us” section to learn more about the company’s mission, team, and story.
+* **Care Service**: User explores the “Care Service” section to understand the range of services offered by ElderCare Co.
+* **Healthcare Professionals**: User visits the “Healthcare Professionals” section to find information about the team members and their qualifications.
+* **Contact Us**: User navigates to the “Contact Us” section to fill out the contact form or find direct contact information.
+* **Browse Plans**: User clicks on the “Browse Plans” button to view different care plans available and select one that suits their needs.
+* **Footer Navigation**: User explores the footer for additional navigation links, subscription box, and contact information.
 
 ## 3. Layout and Navigation
 
-* **Navigation Drawer / Bottom Navigation Bar:**  
-  + **Home:** Featured DIY projects and recent activity.
-  + **Submit Project:** Form for adding new DIY projects.
-  + **Forum:** Access to community discussions.
-  + **Profile:** User account settings and project contributions.
+**Header**:
+* Contact Information: "+63 2 1234 5678"
+* Navigation Links: Home, About Us, Care Service, Healthcare Professionals, Contact Us, Find a Location, Browse Plans
 
-* **Screen Layouts:**  
-  + **Home Screen:** Card-based layout with project previews, images, and brief descriptions.
-  + **Project Detail Screen:** Scrollable view with images, text, and interactive review submission.
-  + **Submission Screen:** Form layout with input fields, image uploader, and submit button.
-  + **Forum Screen:** List of threads with new post button and sorting/filter options.
+**Main Banner**:
+* Text: "Compassionate care, for those who matter most."
+* Buttons: "Browse plans"
+* Contact Options: Call Us: +63 2 1234 5678, Email us: contact@eldercare.com, Visit us: 1234 Main St, Makati, Metro Manila
 
-* **Consistent Navigation:**  
-  + Clear back navigation and intuitive UI components for ease of use.
+**Our Service**:
+* Text: "Wide Variety of Offers for elders"
+* Subtext: "ElderCare offers compassionate, comprehensive, and daily assistance to elders, comfortably and independently."
 
----
+**Statistics**:
+* 100+ Elderly Clients
+* 50+ Team members
+* 500+ Positive reviews
+* 50+ Served
+
+**Contact Us**:
+* Form Fields: Name, Email, Phone, Message
+* Button: "Send Message"
+
+**Footer**:
+* Subscription Box: "Want more? Enter Email Address to Subscribe"
+* Navigation Links: Home, About Us, Care Service, Healthcare Professionals
+* Useful Links: Privacy Policy, Terms of Service
+* Contact Information: Address: 1234 Main St, Makati, Metro Manila, Phone: +63 2 1234 5678, Email: contact@eldercare.com
 
 ## 4. Color Scheme and Visual Style
+**Primary Colors**: Soft purples and whites to evoke calmness and trust.
+**Accent Colors**: Gentle greens and yellows to highlight important information without overwhelming the user.
 
-* **Primary Colors:**  
-  + **Rust:** Conveys warmth and creativity.
-  + **Olive Green:** Symbolizes growth and natural inspiration.
+**Fonts**:
+* Headers: Serif font for elegance and readability.
+* Body: Sans-serif font for clarity and modernity.
 
-* **Accent Colors:**  
-  + **Beige:** Provides a neutral, clean background.
-  + Additional neutral tones for text and subtle UI elements.
-
-* **Visual Style:**  
-  + **Practical and Inspiring:** Clean layout with plenty of white space, large images, and intuitive typography.
-  + **Consistent Iconography:** Simple and clear icons that match the DIY and creative vibe.
-  + **User-Friendly:** Emphasis on clarity and simplicity in design to ensure a smooth user experience.
-
----
+**Imagery**: Use of compassionate, relatable, and high-quality images of seniors and caregivers to foster trust and empathy.
 
 ## 5. Entity Relational Database (ERD)
+**Entities**:
+* Clients (ClientID, Name, Age, Address, Contact Information)
+* Care Plans (PlanID, PlanName, Description, Cost)
+* Appointments (AppointmentID, ClientID, PlanID, Date, Time)
+* Team Members (MemberID, Name, Role, Qualifications, Contact Information)
+* Reviews (ReviewID, ClientID, Rating, Comments)
 
-**Key Entities:**
-
-1. **User**
-   - `user_id` (Primary Key)
-   - `name`
-
-   - `email`
-
-   - `password_hash`
-
-   - `profile_image_url`
-
-   - `date_joined`
-
-2. **DIY_Project**
-   - `project_id` (Primary Key)
-   - `user_id` (Foreign Key - User)
-   - `title`
-
-   - `description`
-
-   - `image_url`
-
-   - `materials_list` (Array/String)
-   - `steps` (Array of steps)
-   - `approved` (Boolean)
-   - `timestamp`
-
-3. **Review**
-   - `review_id` (Primary Key)
-   - `project_id` (Foreign Key - DIY_Project)
-   - `user_id` (Foreign Key - User)
-   - `rating` (Numeric)
-   - `comment`
-
-   - `timestamp`
-
-4. **Forum_Thread**
-   - `thread_id` (Primary Key)
-   - `user_id` (Foreign Key - User)
-   - `title`
-
-   - `content`
-
-   - `timestamp`
-
-5. **Forum_Reply**
-   - `reply_id` (Primary Key)
-   - `thread_id` (Foreign Key - Forum_Thread)
-   - `user_id` (Foreign Key - User)
-   - `comment`
-
-   - `timestamp`
-
----
+**Relationships**:
+* One-to-many relationship between Clients and Appointments
+* Many-to-many relationship between Clients and Care Plans through Appointments
+* One-to-many relationship between Team Members and Appointments
+* One-to-many relationship between Clients and Reviews
 
 ## 6. Dataflow
 
-1. **User Authentication & Registration:**
-   - **Firebase Authentication** is used to create new users or sign in existing ones.
-   - **Dataflow:** User credentials → Firebase Auth → Secure session token.
+**Client Registration**:
+* Clients register and provide their information.
+* Data is stored in the Clients database.
 
-2. **DIY Project Submission:**
-   - **User Action:** Submit new project using the submission form.
-   - **Dataflow:**  
+**Plan Selection**:
+* Clients browse and select care plans.
+* Selected plans are linked to the client's profile.
 
-     - User inputs (text, images) → Firebase Storage (for images)  
-     - Firebase Firestore (for project details) → `approved` flag set to `false`
+**Appointment Scheduling**:
+* Clients schedule appointments with team members.
+* Appointment details are stored in the Appointments database.
 
-     - Admin reviews and updates `approved` to `true` .
+**Service Delivery**:
+* Team members provide care services during scheduled appointments.
+* Care delivery data is recorded for tracking and review purposes.
 
-3. **Project Display & Review:**
-   - **Dataflow:**  
-
-     - Firestore retrieves approved DIY projects → Home Screen display.  
-     - User reviews submitted → Stored in Firestore under `Review` collection → Project detail screen shows cumulative ratings and comments.
-
-4. **Forum Interaction:**
-   - **Dataflow:**  
-
-     - User posts a thread/reply → Stored in Firestore under `Forum_Thread` and `Forum_Reply` collections.
-     - Real-time updates via Firebase’s real-time database capabilities allow immediate discussion updates.
-
-5. **Admin Confirmation Workflow:**
-   - **Dataflow:**  
-
-     - New submissions trigger notifications (using Cloud Functions) → Admin dashboard accesses pending projects/reviews.
-     - On approval, admin updates project’s `approved` flag → Changes reflected in the public display.
-
----
+**Feedback and Reviews**:
+* Clients provide feedback and reviews on the services received.
+* Reviews are stored in the Reviews database and used for continuous improvement.
